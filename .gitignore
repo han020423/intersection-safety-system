@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# AI outputs
+runs/
+outputs/
+
+# Model files
+*.pt
+*.onnx
+*.tflite
+*.engine
+
+# Data
+data/raw/
+data/processed/
+data/labels/
+
+# Spring Boot
+backend/.gradle/
+backend/build/
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
