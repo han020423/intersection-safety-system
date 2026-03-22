@@ -7,6 +7,13 @@ Spring Boot 기반 서버 코드 폴더입니다.
 - 이벤트 로그 DB 저장
 - 지도 시각화용 데이터 조회 API
 
+## 저장 대상 이벤트
+- 우회전 위험 이벤트
+- 비보호좌회전 위험 이벤트
+- STOP / CAUTION / GO 판단 결과
+- 위험 원인 코드(reasonCode)
+- GPS 기반 위치 정보
+
 ## 예정 기능
 - `POST /api/events`
 - `GET /api/events`
