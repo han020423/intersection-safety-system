@@ -1,0 +1,10 @@
+names:
+  0: pedestrian
+  1: vehicle
+  2: traffic_light_vehicle
+  3: traffic_light_pedestrian
+  4: crosswalk
+  5: stop_line
+  6: left_turn_sign
+path: .
+train: train.txt

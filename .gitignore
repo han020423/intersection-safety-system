@@ -10,12 +10,73 @@ venv/
 # AI outputs
 runs/
 outputs/
+ai/scripts/road_v2_ufldv2/*dataset*/
+ai/scripts/road_v2_ufldv2/*.zip
+ai/scripts/road_v2_ufldv2/_scan*/
+ai/scripts/road_v2_ufldv2/_manifest*/
+
+# Local datasets / archives
+ai/scripts/dataset/
+ai/scripts/**/*dataset*/
+ai/scripts/**/Split_Data*/
+ai/scripts/**/train/
+ai/scripts/**/val/
+ai/scripts/**/test/
+ai/scripts/**/images/
+ai/scripts/**/image/
+ai/scripts/**/masks/
+ai/scripts/**/label/
+ai/scripts/**/labels/
+ai/scripts/**/merged_labels/
+ai/scripts/**/annotations/
+ai/scripts/**/Annotations/
+ai/scripts/**/JPEGImages/
+ai/scripts/**/ImageSets/
+ai/scripts/**/eval_frames/
+ai/scripts/**/preview/
+ai/scripts/**/performance_graphs/
+ai/scripts/**/results/
+ai/scripts/**/debug/
+ai/scripts/**/runs/
+ai/scripts/**/train.txt
+ai/scripts/**/val.txt
+ai/scripts/**/test.txt
+ai/scripts/**/metadata.json
+ai/scripts/**/*_train_*/
+ai/scripts/**/*_val_*/
+ai/scripts/**/*_test_*/
+ai/scripts/road_v2/**/*.json
+ai/scripts/road_v3/road_v3_ufldv2_color_10000/
+ai/scripts/road_v3_ufldv2_color_sample/
+ai/scripts/**/*.zip
+ai/scripts/**/*.tar
+ai/scripts/**/*.tar.gz
+ai/scripts/**/*.7z
+ai/scripts/**/*.mp4
+ai/scripts/**/*.avi
+ai/scripts/**/*.mov
+ai/scripts/**/*.jpg
+ai/scripts/**/*.jpeg
+ai/scripts/**/*.png
+edge/inference/**/*.mp4
+edge/inference/**/out*.mp4
+edge/inference/**/*.jpg
+edge/inference/**/*.jpeg
+edge/inference/**/*.png
+edge/inference/**/event_records/
+edge/inference/**/event_snapshots/
+edge/inference/**/.comtypes_cache/
+edge/inference/**/*.jsonl
+docs/render_tmp/
 
 # Model files
 *.pt
+*.pth
 *.onnx
 *.tflite
 *.engine
+*.hef
+*.gguf
 
 # Data
 data/raw/

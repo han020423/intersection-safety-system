@@ -1,0 +1,7 @@
+(np.int32(300), np.int32(359), np.int32(400), np.int32(478), np.float64(1.19))
+(np.int32(277), np.int32(337), np.int32(383), np.int32(477), np.float64(1.320754716981132))
+(np.int32(201), np.int32(279), np.int32(410), np.int32(404), np.float64(0.5980861244019139))
+(np.int32(211), np.int32(265), np.int32(414), np.int32(402), np.float64(0.6748768472906403))
+(np.int32(279), np.int32(337), np.int32(380), np.int32(472), np.float64(1.3366336633663367))
+(np.int32(214), np.int32(269), np.int32(415), np.int32(404), np.float64(0.6716417910447762))
+(np.int32(213), np.int32(264), np.int32(387), np.int32(390), np.float64(0.7241379310344828))

@@ -1,0 +1,27 @@
+=== YOLO 모델 (yolo11n_custom) 테스트 세트 성능 지표 ===
+
+[전체 모델 평가 지표 (All Classes)]
+- mAP50     : 0.8253
+- mAP50-95  : 0.4784
+- Precision : 0.8813
+- Recall    : 0.7493
+
+[객체(클래스)별 성능 지표]
+▶ 'pedestrian'
+   - mAP50    : 0.6470
+   - mAP50-95 : 0.3208
+▶ 'vehicle'
+   - mAP50    : 0.9105
+   - mAP50-95 : 0.6107
+▶ 'traffic_light_vehicle'
+   - mAP50    : 0.8265
+   - mAP50-95 : 0.4282
+▶ 'traffic_light_pedestrian'
+   - mAP50    : 0.8640
+   - mAP50-95 : 0.4446
+▶ 'crosswalk'
+   - mAP50    : 0.8212
+   - mAP50-95 : 0.4259
+▶ 'left_turn_sign'
+   - mAP50    : 0.8829
+   - mAP50-95 : 0.6401
