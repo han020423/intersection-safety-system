@@ -78,6 +78,12 @@ docs/render_tmp/
 *.hef
 *.gguf
 
+# v3 deployable models
+!edge/inference/v3/yolo.pt
+!edge/inference/v3/yolo.onnx
+!edge/inference/v3/road_v4_best_light.pt
+!edge/inference/v3/road_v4_bisenetv2_light.onnx
+
 # Data
 data/raw/
 data/processed/
