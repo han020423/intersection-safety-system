@@ -16,7 +16,7 @@ YOLO11n 객체 인식 + BiSeNetV2 도로 구조 세그멘테이션을 결합하�
   python intersection_demo.py --source video.mp4 --show --save output.mp4 --debug
 
   # 라즈베리파이 최적화 (낮은 해상도, 프레임 스킵)
-  python intersection_demo.py --source 0 --show --width 480 --height 270 \\
+  python intersection_demo.py --source 0 --show --width 480 --height 270 \
       --yolo-interval 3 --seg-interval 2 --seg-input-h 192 --seg-input-w 320
 """
 
@@ -26,6 +26,7 @@ import argparse
 import os
 import sys
 import time
+import requests
 
 import cv2
 import numpy as np
@@ -281,6 +282,29 @@ def main():
                       f"state={fsm.state.value:24s}  decision={fsm.decision.value:8s}  "
                       f"objs={len(dets)}  lane_conf={geo.lane_confidence:.2f}  "
                       f"reason={ctx.reason}")
+
+                # =========================================================
+                # 🚀 [추가된 부분] 스프링 부트 서버로 통신 (1초마다)
+                # =========================================================
+                try:
+                    SERVER_URL = "http://192.168.207.234:8080/api/events"
+
+                    payload = {
+                        "decision": fsm.decision.value,
+                        "state": fsm.state.value,
+                        "reason": ctx.reason,
+                        "objectCount": len(dets)
+                    }
+
+                    response = requests.post(SERVER_URL, json=payload, timeout=2.0)
+
+                    if response.status_code == 200:
+                        print(f"  ✅ [서버 전송 성공] {payload}")
+                    else:
+                        print(f"  ⚠️ [서버 에러] 상태코드: {response.status_code}")
+                except Exception as e:
+                    print(f"  🚨 [서버 연결 실패] 서버가 켜져있는지, IP가 맞는지 확인하세요! 에러: {e}")
+                # =========================================================
 
             # 출력 저장
             if args.save:
