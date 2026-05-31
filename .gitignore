@@ -93,6 +93,8 @@ data/labels/
 backend/.gradle/
 backend/build/
 *.log
+**/application.properties
+**/application.yml
 
 # IDE
 .idea/
