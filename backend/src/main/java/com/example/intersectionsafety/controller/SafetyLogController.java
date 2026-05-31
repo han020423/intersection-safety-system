@@ -20,7 +20,7 @@ public class SafetyLogController {
 
     @PostMapping
     public String receiveDangerEvent(@RequestBody SafetyLog log) {
-        log.setTimestamp(LocalDateTime.now());
+        log.setServerReceivedTime(LocalDateTime.now());
         safetyLogRepository.save(log);
         return "성공: 위험 데이터가 서버 DB에 저장되었습니다!";
     }
