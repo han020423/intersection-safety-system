@@ -68,4 +68,9 @@ public class SafetyLogController {
 
         return summaryResult;
     }
+    @GetMapping("/reset")
+    public String resetData() {
+        safetyLogRepository.deleteAll();
+        return "DB 초기화가 완벽하게 완료되었습니다! 데모를 시작하세요!";
+    }
 }
