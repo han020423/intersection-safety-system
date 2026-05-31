@@ -44,7 +44,7 @@ public class SafetyLogController {
         int totalEvents = logs.size();
 
         for (SafetyLog log : logs) {
-            if (log.getDangerType() != null && log.getDangerType().contains("위반")) {
+            if ("VIOLATION_SUSPECTED".equals(log.getHighestSeverity())) {
                 violationCount++;
             }
         }

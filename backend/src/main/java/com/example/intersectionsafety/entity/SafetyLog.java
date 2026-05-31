@@ -1,29 +1,38 @@
 package com.example.intersectionsafety.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import java.time.LocalDateTime;
+import java.util.List;
 
+@Data
 @Entity
-@Getter
-@Setter
 public class SafetyLog {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Double latitude;      // 위도 (GPS Y좌표)
-    private Double longitude;     // 경도 (GPS X좌표)
-    private String dangerType;    // 위험 유형 (예: 보행자_무단횡단)
+    // 파이썬에서 보내는 데이터 이름표와 100% 일치시킴
+    private String record_type;
+    private String device_id;
+    private String vehicle_id;
+    private String intersection_event_id;
+    private String timestamp; // 파이썬에서 String으로 오므로 일단 String으로 받음
+    private Integer frame_index;
+    private String decision;
+    private String state;
+    private String scenario;
+    private String reason;
+    private Integer objectCount;
 
-    private String location;
+    @ElementCollection
+    private List<String> eventCodes;
 
-    private LocalDateTime timestamp; // 위험 발생 시간
+    private String highestSeverity;
 
-    // 컨트롤러 에러 방지용 수동 세터!
-    public void setTimestamp(LocalDateTime timestamp) {
-        this.timestamp = timestamp;
-    }
+    // 지도 핀 찍기용 GPS (재혁님이 추가해 줄 데이터)
+    private Double latitude;
+    private Double longitude;
+
+    // 서버 도착 시간 (기존 유지)
+    private LocalDateTime serverReceivedTime;
 }
