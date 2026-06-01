@@ -49,8 +49,8 @@ public class SafetyLogController {
             }
         }
 
-        // 1. 위반 1건당 10점의 감점치를 가짐
-        double totalPenalty = violationCount * 10.0;
+        // 1. 위반 1건당 30점의 감점치를 가짐
+        double totalPenalty = violationCount * 30.0;
 
         // 2. 전체 주행 이벤트(totalEvents)로 나누어 점수 희석 (기존의 억지 반올림 제거!)
         double finalPenalty = totalPenalty / (double) totalEvents;
